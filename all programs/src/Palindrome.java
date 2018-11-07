@@ -1,7 +1,10 @@
 
 
 import java.util.Scanner;
-
+/**
+ * @author Mohammed Omar
+ *
+ */
 public class Palindrome {
 
 	public static void main(String[] args) {
