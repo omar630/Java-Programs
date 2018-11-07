@@ -12,14 +12,14 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 
 	String msg = "";
 	int v1, v2, result;
-	JTextField t1, t2;
+	JTextField t1;
 	JButton b;
 	boolean start = true;
 	char OP;
 
 	SimpleCalculator() {
 		t1=new JTextField(25);
-		t2=new JTextField(25);
+		//t2=new JTextField(25);
 		t1.setEditable(false);
 		//setLayout(new BorderLayout());
 		add(t1, BorderLayout.NORTH); 
@@ -33,7 +33,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 			p.add(b); 
 	}
 		add(p, BorderLayout.CENTER);
-		setSize(500,500);
+		setSize(1000,1000);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -95,7 +95,7 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 				}
 				catch(ArithmeticException e)
 				{ 
-				JOptionPane.showMessageDialog(null,"Should not divide by 0");
+				JOptionPane.showMessageDialog(this,"Should not divide by 0");
 				}
 			}
 			t1.setText(""+result);
