@@ -1,7 +1,6 @@
 
 import java.awt.*;
 import java.awt.event.*;
-import java.applet.*;
 import javax.swing.*;
 /*<applet code="SimpletCalculator" width=300 height=300></applet>*/
 
@@ -34,13 +33,13 @@ public class SimpleCalculator extends JFrame implements ActionListener {
 			p.add(b); 
 	}
 		add(p, BorderLayout.CENTER);
-		setSize(400,400);
+		setSize(500,500);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public void actionPerformed(ActionEvent ae)
 	{
-		String str=ae.getActionCommand();
+		String str=ae.getActionCommand();//return the button name which is clicked
 		System.out.println("str="+str);
 		char ch=str.charAt(0);
 		if ( Character.isDigit(ch))
